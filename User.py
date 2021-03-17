@@ -1,13 +1,7 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar 16 19:24:21 2021
-
-@author: Anshul Mudliar
-"""
-
 import numpy as np
 import re
 import tensorflow as tf
+from nltk.stem.porter import PorterStemmer
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import one_hot
 from tensorflow import keras
@@ -33,12 +27,8 @@ stopword = {'a','about','above','after','again','against','ain','all','am','an',
             'y', 'you', "you'd", "you'll", "you're", "you've", 'your', 'yours', 'yourself', 'yourselves'}
 
 def newsPredict(news):
-    
-    
-    
     ps = PorterStemmer()
     latestNews = news
-    
     corpus_latest = []
     
     review = re.sub('[^a-zA-Z]', ' ', latestNews)
@@ -56,7 +46,6 @@ def newsPredict(news):
 
 
 def get_optimizer():
-    
   lr_schedule = tf.keras.optimizers.schedules.InverseTimeDecay(
                 0.001,
                 decay_steps=100,
@@ -66,10 +55,5 @@ def get_optimizer():
 
     
 def compile_model():
-    
     model = keras.models.load_model('tryNew/')
     return model
-
-   
-    
-    
