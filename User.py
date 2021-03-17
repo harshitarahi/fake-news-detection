@@ -6,7 +6,6 @@ Created on Tue Mar 16 19:24:21 2021
 """
 
 import numpy as np
-from nltk.stem.porter import PorterStemmer
 import re
 import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
