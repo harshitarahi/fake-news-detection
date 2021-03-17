@@ -9,13 +9,8 @@ import numpy as np
 from nltk.stem.porter import PorterStemmer
 import re
 import tensorflow as tf
-from tensorflow.keras.layers import Embedding
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import one_hot
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import *
-from tensorflow.keras import layers
-from tensorflow.keras import regularizers
 from tensorflow import keras
 
 
