@@ -17,7 +17,7 @@ def predict():
     output = np.argmax(model.predict(padded_docs), axis=-1)
     output_list = ['barely-true', 'false', 'half-true', 'mostly-true', 'pants-fire', 'true']
     
-    return render_template('index.html', prediction_text='This news seems to be  $ {}'.format(output_list[output]))
+    return render_template('index.html', prediction_text='This news seems to be  $ {}'.format(output_list[output[0]]))
 
 
 if __name__ == "__main__":
