@@ -62,18 +62,8 @@ def get_optimizer():
 def compile_model():
     
     model = keras.models.load_model('tryNew/')
-     
     return model
 
-def predict_class():
-    
-     news = input("Enter the news")
-     
-     model = compile_model()
-     padded_docs = newsPredict(news)
-     
-     print(np.argmax(model.predict(padded_docs), axis=-1))
-    
-compile_model()
+   
     
     
