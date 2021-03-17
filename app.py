@@ -11,7 +11,7 @@ def home():
 
 @app.route('/predict',methods=['POST'])
 def predict():
-    news = request.form.values()
+    news = request.form.values()[0]
     padded_docs = newsPredict(news)
      
     output = np.argmax(model.predict(padded_docs), axis=-1)
