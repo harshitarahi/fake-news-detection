@@ -61,7 +61,7 @@ def get_optimizer():
     
 def compile_model():
     
-    model = keras.models.load_model('C:/Users/Deepak Mudliar/Desktop/ANSHUL/CDAC/Project/Codes/tryNew')
+    model = keras.models.load_model('tryNew/')
      
     return model
 
