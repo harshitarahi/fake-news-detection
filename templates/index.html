@@ -16,9 +16,11 @@
 	<h1>Predict Fake News</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('compile')}}">
+        <button type="Submit" class="btn btn-primary btn-block btn-large">Compile</button>
+    </form>
     <form action="{{ url_for('predict')}}"method="post">
     	<input type="text" name="News Title" placeholder="News Title" required="required" />
-
         <button type="Submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
