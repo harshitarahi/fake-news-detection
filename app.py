@@ -3,12 +3,17 @@ from flask import Flask, request, jsonify, render_template
 from User import *
 
 app = Flask(__name__)
-model = compile_model()
+#model = compile_model()
 
 @app.route('/')
 def home():
     return render_template('index.html')
 
+@app.route('/compile')
+def compile_model():
+    global model
+    model = compile_model()
+    
 @app.route('/predict',methods=['POST'])
 def predict():
     news = request.form["News Title"]
