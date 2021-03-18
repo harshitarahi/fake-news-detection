@@ -10,7 +10,7 @@ def home():
     return render_template('index.html')
 
 @app.route('/compile')
-def compile_model():
+def fetch_model():
     global model
     model = compile_model()
     
