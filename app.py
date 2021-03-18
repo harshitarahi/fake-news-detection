@@ -9,8 +9,8 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/compile')
-def fetch_model():
+@app.route('/fetch')
+def fetch():
     global model
     model = compile_model()
     
