@@ -13,6 +13,7 @@ def home():
 def fetch():
     global model
     model = compile_model()
+    return render_template('index.html')
     
 @app.route('/predict',methods=['POST'])
 def predict():
