@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 from User import *
 
 app = Flask(__name__)
-#model = compile_model()
+model = compile_model()
 
 @app.route('/')
 def home():
