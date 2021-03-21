@@ -41,6 +41,6 @@ def get_optimizer():
   return tf.keras.optimizers.Adam(lr_schedule)
 
     
-def compile_model():
+def load_model():
     model = keras.models.load_model('tryNew/')
     return model
